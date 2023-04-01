@@ -1,0 +1,30 @@
+{
+  "SystemStatus": "on",
+  "OS": "Ubuntu",
+  "IPv4": "172.168.13.55",
+  "Keyboard": "PixArt USB Optical Mouse",
+  "HDD": {
+    "totalMemory": "500 GB",
+    "HDD0": {
+      "SerialNumber": "9VV0T5S6",
+      "size": "500 GB",
+      "Model": "ST3500414CS"
+    }
+  },
+  "CPU": {
+    "NumberOfLogicalProcessors": 6,
+    "Identifier": "Intel64 Family 6 Model 158 Stepping 10",
+    "Name": "Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz"
+  },
+  "System": {
+    "SerialNumber": "unknown",
+    "Manufacturer": "Gigabyte Technology Co., Ltd.",
+    "model": "H310M S2 2.0 (version: Default string)"
+  },
+  "MAC": "18:c0:4d:5b:f7:ac",
+  "Monitor": { "size": " 406x229 mm", "Name": " LG ELECTRONICS W1643" },
+  "Mouse": { "Model": " Pixart Imaging Optical Mouse" },
+  "LinuxKeyboard": { "Model": " SiGma Micro Keyboard TRACER Gamma Ivory" },
+  "action": "sendmessage",
+  "RAM": { "totalMemory": "0 GiB" }
+}

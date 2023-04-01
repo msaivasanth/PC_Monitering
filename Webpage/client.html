@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WebSocker Client</title>
+  </head>
+
+  <body>
+    <label for="lab">Lab No. :</label>
+    <input type="text" id="lab" name="lab"><br>
+    <label for="systems">No. of Systems: </label>
+    <input type="text" id="systems" name="systems"><br>
+    <button onclick="contactServer()">Click Here</button>
+    <br><br>
+    <p id="print"></p>
+  </body>
+
+  <script>
+    const socket = new WebSocket("wss://0hqif30xkl.execute-api.us-west-2.amazonaws.com/production");
+
+    socket.addEventListener("open", function (event) {
+      //socket.send("Connection Established");
+      console.log("connected");
+    });
+
+    socket.addEventListener("message", function (event) {
+      document.getElementById("print").innerText=event.data;
+    });
+
+    function contactServer(){
+      var lab=document.getElementById("lab").value;
+      var sys=document.getElementById("systems").value;
+      socket.send(JSON.stringify({"action":"lab","lab":lab,"sys":sys}));
+      document.getElementById("print").innerText="Success";
+    }
+  </script>
+</html>
